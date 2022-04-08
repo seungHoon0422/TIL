@@ -4,5 +4,8 @@
 
 Algorithm
 
+- [Brute Force](./Algorithm/BruteForce/)
+- [Simulation](./Algorithm/Simulation/)
+- [Implementation](./Algorithm/Implementation/)
 - [DP](./Algorithm/DP)
-  - [LIS](./Algorithm/DP/LIS.md)
+
