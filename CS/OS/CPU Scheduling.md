@@ -14,7 +14,7 @@
 
 
 list
-  - [Preemptive vs Non-Preemptive](#preemptive-vs-non-preemptive)
+  - [Preemptive vs Non-Preemptive](#fifo-fcfsfirst-come-first-servced)
   - [FIFO, FCFS(First Come First Servced)](#-fifo-fcfsfirst-come-first-servced)
   - [SJF(Shortest Job First)](#-sjfshortest-job-first)
   - [SRTF(Shortest Remaining Time First)](#-srtfshortest-remaining-time-first)
@@ -38,7 +38,6 @@ list
 
 
 ## SJF(Shortest Job First)
----
 
 - 동작 방식
   - **실행시간이 짧은 프로세스를 먼저 실행**
@@ -48,34 +47,29 @@ list
   - Provably optimal
   - Not realistic; prediction may be needed. 비현실적임. 예측을 해야 함
 ## SRTF(Shortest Remaining Time First)
----
 
 
 
 
 
 ## Round Robin(RR)
----
 
 
 
 
 
 ## Priority
----
 
 
 
 
 
 ## Multilevel Queue
----
 
 
 
 
 ## Multilevel Feedback Queue
----
 
 
 
