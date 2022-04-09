@@ -1,6 +1,23 @@
 # Spring
 
  
+## list
+- [Spring](#spring)
+  - [list](#list)
+  - [Spring Framewokr란 ?](#spring-framewokr란-)
+  - [Library](#library)
+  - [Framework](#framework)
+  - [Library vs Framework](#library-vs-framework)
+  - [Spring MVC 구조](#spring-mvc-구조)
+  - [IOC (Inversion of Control)](#ioc-inversion-of-control)
+  - [DI (Dependency Injection)](#di-dependency-injection)
+  - [DI의 장점](#di의-장점)
+
+
+
+<br>
+
+
 ## Spring Framewokr란 ?
 
 ---
@@ -11,13 +28,13 @@
 
 
 
-## 라이브러리
+## Library
 
 ---
 
 라이브러리는 개발에 필요한 기능이 있을 때 직접 가져와 사용할 수 있도록 **자주 사용되는 기능들을 모아 미리 구현해둔 것**이다.
 
-## 프레임워크
+## Framework
 
 ---
 
