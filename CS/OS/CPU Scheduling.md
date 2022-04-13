@@ -1,37 +1,60 @@
 # CPU Scheduling
 
+  
+## CPU Scheduler
+---
+
+운영체제 안에서 CPU 스케줄링을 하는 코드가 있는 부분. Ready 상태의 프로세스 중 누구한테 CPU를 줄지 결정한다.
+
+## Dispatcher
+---
+CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 CPU를 넘겨주는 역할을 하는 운영체제 커널 코드
+(현재 돌아가고 있는 프로세스의 context를 저장하고 새로 CPU를 넘겨줄 프로세스의 context를 가져온다.)
+
+
+
+
+
+
+
+## Scheduling Criteria (스케줄링 척도)
+---
+
+- 시스템 입장(CPU 하나로 최대한 일을 많이 시키면 좋은 것)
+
+  - CPU Utilization (CPU 이용률) : 전체 시간 중에서 CPU가 놀지 않고 일한 시간의 비율
+
+  - Throughput (처리율) : 단위 시간당 CPU의 처리량을 의미, 시간당 몇 개의 작업을 처리하는가
+
+- 프로세스 입장(CPU를 빨리 얻어서 빨리 끝나면 좋은 것)
+
+  - Turnaround time (반환시간, 소요시간) : 작업이 레디큐에 들어가서 다쓰고 나오는데까지 걸리는 시간, 짧아야 좋음
+
+  - Waiting time (대기시간) : CPU가 서비스를 받기 위해 Ready Queue에서 얼마나 기다렸는가를 의미
+
+  - Response time (응답시간) : 가장 처음 CPU를 잡게 되는 시간
+
 
 ## Preemptive vs Non-Preemptive
 
 ---
 
 - Preemptive (선점)
-  > CPU가 어느 프로세스를 실행하고 있는데(실행중인 프로세스가 종료되지도 않고, IO를 만난것도 아닌 상황) 실행중인 프로세스를 강제로 쫓아내고 새로운 것이 들어갈 수 있는 스케줄링 방식( 응급실이라고 생각하면 이해하기 편하다!)
 
-  > ex) SRTF, RR
+    - CPU가 어느 프로세스를 실행하고 있는데(실행중인 프로세스가 종료되지도 않고, IO를 만난것도 아닌 상황) 실행중인 프로세스를 강제로 쫓아내고 새로운 것이 들어갈 수 있는 스케줄링 방식( 응급실이라고 생각하면 이해하기 편하다!)
 
+    - ex) SRTF, RR
 
 
 
 - Non Preemptive (비선점)
 
-  > 프로세스가 종료되거나, IO를 만나기 전에는 실행 프로세스의 변경을 허용하지 않는 방식( 은행 )
+  - 프로세스가 종료되거나, IO를 만나기 전에는 실행 프로세스의 변경을 허용하지 않는 방식( 은행 )
 
-  > ex) FCFS, SJF, Priority
+  - ex) FCFS, SJF, Priority
 
 
 
-## Scheduling Criteria (스케줄링 척도)
-
-CPU Utilization (CPU 이용률) : 전체 시간 중에서 CPU가 놀지 않고 일한 시간의 비율, CPU가 얼마나 놀지않고 부지런히 일하는가
-
-Throughput (처리율) : 단위 시간당 CPU의 처리량을 의미, 시간당 몇 개의 작업을 처리하는가
-
-Turnaround time (반환시간) : 작업이 레디큐에 들어가서 나오는 시간의 차이(병원에서 진료 받을 때..대기하고 CT 찍고, … 나오는 시간 차) 짧아야 좋음
-
-Waiting time (대기시간) : CPU가 서비스를 받기 위해 Ready Queue에서 얼마나 기다렸는가
-
-Response time (응답시간) : 가장 처음 CPU를 잡게 되는 시간, Interactive system에서 중요. 클릭-답, 타이핑-답. 첫 응답이 나올 때 까지 걸리는 시간
 
 ### List
   - [FIFO, FCFS(First Come First Servced)](#fifo-fcfsfirst-come-first-servced)
@@ -44,7 +67,7 @@ Response time (응답시간) : 가장 처음 CPU를 잡게 되는 시간, Intera
 
 
 ## FIFO, FCFS(First Come First Servced)
-
+`
 **작동 방식**
 - 먼저 들어온 프로세스를 먼저 실행
 
