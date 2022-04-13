@@ -14,6 +14,6 @@
   - [Programmers](./Algorithm/Programmers/)
 
 - [CS](./CS/)
-  - [OS](./cs/OS/)
+  - [OS](./CS/OS/)
 
 - [Spring](./Spring/)
