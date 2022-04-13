@@ -55,7 +55,7 @@ CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 CPU를 
 
 ### List
   - [FIFO, FCFS(First Come First Servced)](#fifo-fcfsfirst-come-first-servced)
-  - [SJF(Shortest Job First)](#sjfshortest-job-first)
+  - [SJF(Shortest Job First)](#sjf-srtf)
   - [SRTF(Shortest Remaining Time First)](#srtfshortest-remaining-time-first)
   - [Round Robin(RR)](#round-robinrr)
   - [Priority](#priority)
@@ -64,7 +64,7 @@ CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 CPU를 
 
 
 ## FIFO, FCFS(First Come First Servced)
-`
+
 **작동 방식**
 - 먼저 들어온 프로세스를 먼저 실행
 
@@ -79,33 +79,27 @@ CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 CPU를 
 
 <br>
 
-## SJF(Shortest Job First)
+## SJF, SRTF
 
 - 작동 방식
   - **실행시간이 짧은 프로세스를 먼저 실행**
 
-SJF(Shortest Job First)는 CPU의 Burst Time이 짧은 프로세스에게 프로세서를 우선 할당하는 정책이다. 중요한 것은 Burst Time을 이용한다는 점으로, 프로세스의 전반적인 실행시간이 아니라 실제로 프로세서를 이용하는 시간이 가장 짧은 프로세스부터 실행하여 효율을 높인 정책이다. 만약 스케쥴링 대상의 프로세스들이 모두 같은 Burst Time을 갖고 있다면 FCFS(First-Come-First-Served) 정책을 따른다.
-
-SRTF(Shortest Remaining Time First)는 SJF에 선점 정책을 도입한 것이라 이해한다.
-
-잦은 프로세스 잔여 실행시간을 계산(clock cycle마다 측정)해야 하고 이에 따른 컨텍스트 전환이 발생하면 그로 인한 오버헤드가 증가할 수 밖에 없다. 따라서 현실적으로 구현 및 사용이 어려운 정책이다.
+- Bust Time : 실제 프로세스가 실행되어 CPU를 사용하는 시간
 
 
-- 특징
-  - 대기시간을 줄여야한다는 관점에서는 SJF이 가장 좋다.
-  - Provably optimal
-  - Not realistic; prediction may be needed. 비현실적임. 예측을 해야 함
+- SJF(Shortest Job First)
+> CPU의 Burst Time이 짧은 프로세스에게 프로세서를 우선 할당하는 정책이다. 중요한 것은 Burst Time을 이용한다는 점으로, 프로세스의 전반적인 실행시간이 아니라 실제로 프로세서를 이용하는 시간이 가장 짧은 프로세스부터 실행하여 효율을 높인 정책이다. 만약 스케쥴링 대상의 프로세스들이 모두 같은 Burst Time을 갖고 있다면 FCFS(First-Come-First-Served) 정책을 따른다.
 
-<br>
 
-## SRTF(Shortest Remaining Time First)
-
-**작동 방식**
-- 
+-  SRTF(Shortest Remaining Time First) 
+  > SJF에 선점 정책을 도입한 것이라 이해한다.
+  > 잦은 프로세스 잔여 실행시간을 계산(clock cycle마다 측정)해야 하고 이에 따른 컨텍스트 전환이 발생하면 그로 인한 오버헤드가 증가할 수 밖에 없다. 따라서 현실적으로 구현 및 사용이 어려운 정책이다.
 
 
 **특징**
-- 
+  - 대기시간을 줄여야한다는 관점에서는 SJF이 가장 좋다.
+  - optimal
+  - Not realistic; prediction may be needed. 비현실적임. 예측을 해야 함
 
 
 <br>
@@ -113,12 +107,12 @@ SRTF(Shortest Remaining Time First)는 SJF에 선점 정책을 도입한 것이�
 ## Round Robin(RR)
 
 **작동 방식**
-- 
+- clock cycle마다 다른 프로세스 실행
 
 
 **특징**
-- 
-
+- Preemptive Scheduling : 선점 스케쥴링의 대표, clock cycle마다 실행하는 프로세스를 번경시킨다.
+- clock cycle을 짧게하여 모든 프로세스가 공평하게 cpu를 사용하면 좋지만, 프로세스를 변경하는 과정(실행중인 프로세스의 데이터를 저장하고, 새로운 프로세스 정보를 읽어오는 과정)에서 발생하는 오버헤드를 무시할 수 없다.
 
 <br>
 
@@ -128,14 +122,15 @@ SRTF(Shortest Remaining Time First)는 SJF에 선점 정책을 도입한 것이�
 - 우선순위가 높은 프로세스 실행
   
 
-우선순위 스케쥴링은 간단하다. 각각의 프로세스에 우선순위가 있고 이 우선순위를 판별하여 우선순위가 더 높다고 판단되는 프로세스가 가장 먼저 프로세서를 할당받는다. 프로세스 우선순위는 커널이 결정하거나 커널 외부에서 결정하기도 하며, 우선순위를 나타내는 값이 작은 수를 지향하는지 큰 수를 지향하는 지는 운영체제에 따라 다르다.
+**특징**
+- 우선순위 스케쥴링은 간단하다. 각각의 프로세스에 우선순위가 있고 이 우선순위를 판별하여 우선순위가 더 높다고 판단되는 프로세스가 가장 먼저 프로세서를 할당받는다. 
 
-이런 우선순위 스케쥴링의 가장 큰 문제점은 **기아 현상**이다. 나중에 소개할 **SJF(Shortest Job First)**에도 공통적인 문제로서 우선순위가 상대적으로 낮은 프로세스가 계속해서 실행되지 못하는 현상이다.
+- 프로세스 우선순위는 커널이 결정하거나 커널 외부에서 결정하기도 하며, 우선순위를 나타내는 값이 작은 수를 지향하는지 큰 수를 지향하는 지는 운영체제에 따라 다르다.
+
+- 이런 우선순위 스케쥴링의 가장 큰 문제점은 **기아 현상**이다. **SJF(Shortest Job First)**에도 공통적인 문제로서 우선순위가 상대적으로 낮은 프로세스가 계속해서 실행되지 못하는 현상이다.
 
 이를 해결하는 기법은 **에이징(Aging) 기법**으로, 일정 시간이 지나면 기아 상태에 빠질 것으로 예상되는 프로세스의 우선순위를 높이는 기법이다.
 
-**특징**
-- 
 
 
 
