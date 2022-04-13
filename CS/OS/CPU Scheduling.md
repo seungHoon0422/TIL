@@ -84,7 +84,7 @@ CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 `CPU를
   - `실행시간이 짧은 프로세스를 먼저 실행`
 
 
-- Bust Time : 실제 프로세스가 실행되어 CPU를 사용하는 시간
+- Burst Time : 실제 프로세스가 실행되어 CPU를 사용하는 시간
 
 
 - SJF(Shortest Job First)
