@@ -2,12 +2,11 @@
 
   
 ## CPU Scheduler
----
 
 운영체제 안에서 CPU 스케줄링을 하는 코드가 있는 부분. Ready 상태의 프로세스 중 누구한테 CPU를 줄지 결정한다.
 
 ## Dispatcher
----
+
 CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 CPU를 넘겨주는 역할을 하는 운영체제 커널 코드
 (현재 돌아가고 있는 프로세스의 context를 저장하고 새로 CPU를 넘겨줄 프로세스의 context를 가져온다.)
 
@@ -18,7 +17,6 @@ CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 CPU를 
 
 
 ## Scheduling Criteria (스케줄링 척도)
----
 
 - 시스템 입장(CPU 하나로 최대한 일을 많이 시키면 좋은 것)
 
@@ -37,7 +35,6 @@ CPU를 누구한테 줄지 결정됐으면 실제로 그 프로세스에 CPU를 
 
 ## Preemptive vs Non-Preemptive
 
----
 
 - Preemptive (선점)
 
