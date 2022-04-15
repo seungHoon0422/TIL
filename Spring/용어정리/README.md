@@ -79,6 +79,26 @@ Web Context module은 Aplication Context module 상위에 구현되어, Web 기�
 Spring Framework는 자체적으로 MVC 프레임워크를 제공하고 있으며, 스프링만 사용해도 MVC기반의 웹 어플리케이션을 어렵지 않게 개발이 가능하다.
 
 
+### Bean
+- 스프링이 IoC방식으로 관리하는 오브젝트
+- 스프링이 직접 그 생성과 제어를 담당하는 오브젝트만을 Bean이라고 부른다.
+
+### Bean Factory
+- 스프링이 IoC를 담당하는 핵심 컨테이너
+- Bean을 등록, 생성, 조회, 반환하는 기능을 담당
+- 일반적으로 BeanFactory를 바로 사용하지 않고, 이를 확장한 Application Context를 이용한다.
+
+### ApplicationContext
+- BeanFactory를 확장한 IoC Container
+- Bean을 등록하고 관리하는 기본적인 기능은 BeanFactory와 동일
+- 스프링이 제공하는 각종 부가서비스를 추가로 제공
+- BeanFactory라고 부를 떄는 주로 빈의 생성과 제어의 관점에서 이야기하는 것이고, ApplicationContext라고 할때는 스프링이 제공하는 애플리케이션 지원 기능을 모두 포함해서 이야기 하는 것이라고 보면 된다.
+
+### Configuration metaData
+- 스프링의 설정 정보란 ApplicationContext 또는 BeanFactory가 IoC를 적용하기 위해 사용하는 메타정보를 말한다. 이는 구성정보, 형상정보라는 의미이다.
+- 설정정보는 IoC Container에 의해 관리되는 Bean 객체를 생성하고 구성할 때 사용 된다.
+
+
 
 
 

@@ -1,3 +1,5 @@
+# IoC and DI
+
 
 ## IOC (Inversion of Control)
 
@@ -26,24 +28,61 @@ IOC는 직역하면 제어의 역전으로 무엇인가 제어하는 주체가 �
 - 수정이 필요한 클래스가 유지보수 될 때 그 클래스와 결합된 다른 클래스도 같이 유지보수 되어야 할 가능성이 높음
 
 
+<br/>
+
+
+### Container
+
+#### Container 란?
+- 객체의 생성, 사용, 소멸에 해당하는 라이프사이클을 담당
+- 라이프사이클을 기본으로 애플리케이션 사용에 필요한 주요 기능을 제공
+
+#### Container 기능
+- 라이프사이클 관리
+- Dependency 객체 제공
+- Thread 관리
+- 기타 애플리케이션 실행에 필요한 환경
+
+
+#### Container 필요성
+- 서비스, COnfiguration에 대한 일관성을 갖기 위해 사용
+- 서비스 객체를 사용하기 위해 각각 Factory, Singleton 패턴을 직접 구현하지 않아도 됨
+
+
 ### IoC Container
 
 > 스프링 프레임워크도 객체에 대한 생성 및 생명주기를 관리할 수 있는 기능을 제공한다.
 > 이때, IoC 컨테이너가 기능을 제공
 
-기존의 객체 생성 과정
+#### 기존의 객체 생성 과정
 1. new를 통해 객체 생성
 2. 의존성 객체 생성 - 클래스 내부에서 생성
 3. 의존성 객체 메서드 호출
 
-스프링의 객체 생성 과정
+#### 스프링의 객체 생성 과정
 1. 객체 생성
 2. 의존성 객체 주입 - 스스로 만드는 것이 아닌, 제어권을 스프링에게 위임하여 스프링이 만들어 놓은 객체를 주입
 3. 의존성 객체 메서드 호출
 
 
-<p align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWA19RNlq1J6YiM-TI_rElVVLrdzuAe7aAAw&usqp=CAU"></p>
+### Spring DI Container
 
+Spring DI Container가 관리하는 객체를 Bean이라 하고, 이 Bean들의 생명주기를 관리하는 의미로 Bean Factory라고 한다.
+Bean Factory에 여러가지 컨테이너 기능을 추가하여 ApplicationContext라고 한다.
+
+#### Bean Factory (interface)
+- Bean을 등록, 생성, 조회, 반환 관리
+- 일반적으로는 BeanFactory보다는 이를 확장한 Application Context를 사용
+- `getBean()` method가 정의되어 있다.
+
+#### Application Context (interface)
+
+- Bean을 등록, 생성, 조회, 반환 관리
+- Spring의 각종 부가서비스를 추가로 제공
+
+
+<br/>
+<br/>
 
 
 
@@ -85,4 +124,4 @@ Component라고 작성해도 되지만, 보다 구체적으로 역할을 명시�
 
 - @scope : xml파일에서 scope 변수에 설정했지만  annotation으로 표현하는 방식으로 변경 
   - `@Scope("singleton")`
-  - scope의 종류 : singleton, prototype(빈 요청때마다 새로운 인스턴스 생성), request, session
+  - scope의 종류 : singleton, prototype(빈 요청때마다   새로운 인스턴스 생성), request, session
