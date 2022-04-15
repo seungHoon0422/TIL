@@ -63,6 +63,28 @@ Spring의 부가서비스 추가 제공
 
 
 
+### Spring Core
+Spring Framework의 핵심 기능을 제공하며, Core 컨테이너의 주요 컴포넌트는 Bean Factory이다.
+### Spring Context
+Spring을 컨테이너로 만든 것이 Spring core의 BeanFactory라면, Spring을 Framework로 만든 것은 Context module이며, d이 module은 국제화된 메시지, Application 생명주기 이벤트, 유효성 검증 등을 지원함으로써 BeanFactory의 개념을 확장한다.
+### Spring AOP
+설정 관리 기능을 통해 AOP기능을 Spring Framework와 직접 통합시킨다.
+### Spring DAO
+Spring JDBC DAO추상 레이어는 다른 데이터베이스 벤더들의 예외 핸들링과 오류 메시지를 관리하는 중요한 예외 게층을 제공한다.
+### Spring ORM
+Spring Framework는 여러 ORM(Object Relational Mapping) Framework에 플러그인 되어, Object Relational Tool(JDO, Hibernate, iBatis)을 제공한다.
+### Spring Web
+Web Context module은 Aplication Context module 상위에 구현되어, Web 기반 Application에 context를 제공한다.
+### Spring Web MVC
+Spring Framework는 자체적으로 MVC 프레임워크를 제공하고 있으며, 스프링만 사용해도 MVC기반의 웹 어플리케이션을 어렵지 않게 개발이 가능하다.
+
+
+
+
+
+
+
+
 
 ### spring bean xml 설정
 
