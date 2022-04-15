@@ -2,11 +2,12 @@
 
 <br>
 
-## list
+## 📢 list
 
 - [Algorithm](./Algorithm/)
   - [Brute Force](./Algorithm/BruteForce/)
   - [Graph](./Algorithm/graph)
+  - [Backtracking](./Algorithm/BackTracking/)
   - [Simulation](./Algorithm/Simulation/)
   - [Implementation](./Algorithm/Implementation/)
   - [DP](./Algorithm/DP)
@@ -17,3 +18,8 @@
   - [OS](./CS/OS/)
 
 - [Spring](./Spring/)
+  - [용어정리](./Spring/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/)
+  - [what is Spring?](./Spring/What%20is%20Spring/)
+  - [Spring MVC](./Spring/Spring%20MVC/)
+  - [IoC DI](./Spring/IoC%20DI/)
+  - [AOP](./Spring/AOP/)
