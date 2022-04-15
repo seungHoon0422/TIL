@@ -10,6 +10,7 @@ import java.util.StringTokenizer;
  * 
  *  category : 그래프탐색, BFS, 맨해튼 거리
  * 
+ *
  * 맥주 1박스에 20병
  * 20병 이상으로는 담을 수 없고 1병으로 50m 전진 가능!!
  * 편의점에서 맥주를 살 수 있다
