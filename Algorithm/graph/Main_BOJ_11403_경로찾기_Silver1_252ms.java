@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 
 /**
  * 
- * 그래프이론, 플로이드-와샬
+ * category : 그래프이론, 플로이드-와샬
  * 
  * 가중치가 없는, 방향 그래프가 주어졌을 때 각 노드별 연결 상태를 출력
  * 
