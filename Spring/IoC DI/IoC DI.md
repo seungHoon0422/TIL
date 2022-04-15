@@ -42,8 +42,8 @@ IOC는 직역하면 제어의 역전으로 무엇인가 제어하는 주체가 �
 3. 의존성 객체 메서드 호출
 
 
+<p align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWA19RNlq1J6YiM-TI_rElVVLrdzuAe7aAAw&usqp=CAU"></p>
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWA19RNlq1J6YiM-TI_rElVVLrdzuAe7aAAw&usqp=CAU)
 
 
 
