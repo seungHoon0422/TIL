@@ -2,7 +2,7 @@
 
 <br>
 
-## 📢 list
+## 📢 contents
 
 - [Algorithm](./Algorithm/)
   - [Brute Force](./Algorithm/BruteForce/)
