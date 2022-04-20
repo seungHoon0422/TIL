@@ -1,6 +1,7 @@
-## Spring MVC 구조
+# Spring MVC 구조
 
 ### MVC Pattern
+
 * MVC는  Model - View - Controller의 줄임말이다.
 * 컴포넌트의 변경이 다른 영역 컴포넌트에 영향을 미치지 않음( 유지보수에 용이하다 )
 * 컴포넌트 간의 결합성이 낮아 프로그램 수정이 용이하다. ( 확장성이 뛰어남 )
@@ -23,7 +24,7 @@
   * **View와 Service 사이를 연결**해준다. 클라이언트가 입력한 URL에 맞는 View를 매핑해주고, View에서 처리하는 데이터를 Service로 전달해준다.
   * 어플리케이션의 행위 정의
   * 사용자 액션을 모델 업데이트와 mapping
-  * 응답에 대한 view 선택`
+  * 응답에 대한 view 선택
 
 * 장점
   * 화면과 비즈니스 로직을 분리해서 작업 가능
@@ -35,12 +36,11 @@
   * 초보자가 이해하고 개발하기에 다소 어려움
 
 
-### Spring MVC
-`
-* 특징
-  * DI, AOP 기능 뿐만 아니라 Servlet 기반의 WEB개발을 위한 MVC Framework를 제공
-  * Spring MVC는 Model2 Architecture와 Front Controller Pattern을 Framework 차원에서 제공
-  * Spring이 제공하는 Transaction 처리나 DI 및 AOP 등을 손쉽게 사용
+## Spring MVC
+
+* DI, AOP 기능 뿐만 아니라 Servlet 기반의 WEB개발을 위한 MVC Framework를 제공
+* Spring MVC는 Model2 Architecture와 Front Controller Pattern을 Framework 차원에서 제공
+* Spring이 제공하는 Transaction 처리나 DI 및 AOP 등을 손쉽게 사용
 
 
 ### 구성요소
@@ -108,7 +108,6 @@
   <beans:property name="prefix" value="/WEB-INF/views/" />
   <beans:property name="suffix" value=".jsp" />
 </beans:bean>
-
 ```
 
 
