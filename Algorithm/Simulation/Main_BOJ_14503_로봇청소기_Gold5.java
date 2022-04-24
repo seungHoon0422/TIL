@@ -33,7 +33,7 @@ public class Main_BOJ_14503_로봇청소기_Gold5 {
 	private static int N;
 	private static int M;
 	private static int[] dr = {-1, 0, 1, 0};
-	private static int[] dC = {0, 1, 0, -1};
+	private static int[] dc = {0, 1, 0, -1};
 	private static char[][] board;
 	private static boolean[][] visited;
 
@@ -42,23 +42,25 @@ public class Main_BOJ_14503_로봇청소기_Gold5 {
 	
 	public static void main(String[] args) throws Exception {
 		
-		N = Integer.parseInt(br.readLine()); //  (3 ≤ N, M ≤ 50)
-		M = Integer.parseInt(br.readLine());
+		st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken()); //  (3 ≤ N, M ≤ 50)
+		M = Integer.parseInt(st.nextToken());
 		
 		st = new StringTokenizer(br.readLine());
 		int sr = Integer.parseInt(st.nextToken());
 		int sc = Integer.parseInt(st.nextToken());
 		int sd = Integer.parseInt(st.nextToken());
 		
+		board = new char[N][M];
 		for(int i=0; i<N; i++) {
 			String str = br.readLine();
-			for(int j=0; j<M; j++) {
-				board[i][j] = str.charAt(j);
+			for(int j=0, index=0; j<M; j++, index+=2) {
+				board[i][j] = str.charAt(index);
 			}
 		}
 		
 		visited = new boolean[N][M];
-		System.out.println(go(sr,sc,sd, 0));
+		System.out.println(go(sr,sc,sd, 1));
 		
 		
 		
@@ -70,9 +72,58 @@ public class Main_BOJ_14503_로봇청소기_Gold5 {
 
 	private static int go(int r, int c, int d, int count) {
 		
+		int nr = r;
+		int nc = c;
+		int nd = d;
+		int rotateCount = 0;
 		
 		
+		for(; rotateCount<4; rotateCount++) {
+			
+			
+			// 왼쪽 방이 방문한적이 없고, 청소가 가능한 방인 경우
+			if(checkLeft(nr,nc,nd)) {
+				// 왼쪽 방향으로 회전
+				nd = (nd+3)%4;
+				nr = r+dr[nd];
+				nc = c+dc[nd];
+				board[nr][nc] = '2';
+				return go(nr,nc,nd, count+1);
+			}
+			// 왼쪽 방향으로 회전
+			nd = (nd+3)%4;
+		}
+
+		// 후진이 가능한 경우
+		if(moveBackPossible(r,c,nd)) {
+			return go(r+dr[(nd+2)%4],c+dc[(nd+2)%4],nd, count);
+		}
+		// 후진이 불가능한 경우에느 count를 바로 return
 		return count;
+	}
+
+
+
+
+	private static boolean moveBackPossible(int r, int c, int nd) {
+		
+		nd = (nd+2)%4;
+		int nr = r+dr[nd];
+		int nc = c+dc[nd];
+		if(board[nr][nc] == '1') return false;
+		return true;
+	}
+
+
+
+
+	private static boolean checkLeft(int r, int c, int d) {
+		
+		d = (d+3)%4;
+		int nr = r+dr[d];
+		int nc = c+dc[d];
+		if(board[nr][nc] != '1') return true;
+		else return false;
 	}
 	
 	
