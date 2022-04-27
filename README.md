@@ -16,6 +16,7 @@
 
 - [CS](./CS/)
   - [OS](./CS/OS/)
+  - [Web](./CS/Web/)
 
 - [Spring](./Spring/)
   - [용어정리](./Spring/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/)
