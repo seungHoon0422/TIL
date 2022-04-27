@@ -1,4 +1,4 @@
- # Web Server VS WAS
+ # Web Server vs WAS
 
 <br>
 
