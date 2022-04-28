@@ -41,7 +41,7 @@
 
 - `@Aspect` : aop 설정파일, Pointcut
 - `@Before` : methd 실행하기 전에 수행
-- `@AfterReturning` : 
+- `@AfterReturning` 
 - `@AfterThrowing`
 - `@After `
 - `@Around` : 왔다갔다 귀찮으니까 method안에 한번에 다 써놓는다. proceed를 통해서 분리
@@ -76,7 +76,7 @@
 
 - `@ResponseBody` : 넘어갈 화면이 아니라 데이터라고 명시
 - `@RestController` : 이 Controller안에 있는 method는 모두 data전송을 위한 함수이다.
-- `@CrossOrigin(*)` : 등록된 도메인만 접근 가능하다.
+- `@CrossOrigin(*)` : 등록된 도메인만 접근 가능하다. 허용하고 싶은 도메인 주소만 적용
 - `@RequestBody MemberDto memberDto` : 사용자가 나한테 데이터를 넘겨줬을 때, json
 
 
@@ -100,9 +100,22 @@
   public class MemberDto {    
   	@ApiModelProperty(value = "회원 아이디")   
    	private String userid;
+  }
   ```
 
 
+
+---
+
+
+
+### 7. Spring Boot Annotation
+
+
+- @SpringBootApplication
+- @SpringBootConfiguration
+- @EnableAutoConfiguration
+- @ComponentScan
 
 
 

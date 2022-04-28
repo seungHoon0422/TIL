@@ -10,3 +10,4 @@
 
 - REST API 적용 실습
 - 기존 `@Controller`만을 사용하여 작성된 프로젝트를 `@Controller` 와 `@RestController`를 동시에 사용하는 방식으로 수정하려고 하니까 front 쪽에 처리하던 방식을 비동기 처리(ajax)로 변경해야 한다.(상당부분)
+- Spring Annotation 정리
