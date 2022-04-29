@@ -1,5 +1,11 @@
 # History
 
+
+## 2022.04.29
+
+ - happy house 프로젝트 spring boot형식으로 변환하고, github를 사용해서 작업환경 구성
+
+
 ## 2022.04.28
 
 - Spring 프로젝트에서 Spring Boot로 변경할 때 수정해야할 사항 정리
