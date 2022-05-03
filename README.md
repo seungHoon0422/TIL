@@ -30,4 +30,4 @@
   - [Swagger](./Spring/Swagger/README.md)
 
 - [Vue.js](./VueJS/)
-- [vue directive](./VueJS/Vue.js%20Directive.md)
+  - [vue directive](./VueJS/Vue.js%20Directive.md)
