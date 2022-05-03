@@ -2,7 +2,13 @@
 
 ## 2022/05
 
-### 2022.05.02
+### 2022.05.03(화)
+- Vue.js 시작, element, directive 학습
+- vue를 사용하기 위해서 vscode에 여러 확장파일을 설치하고, chrome debugging tool을 사용하기 위해 chrome확장파일인 vue.js devtools 설치
+
+
+
+### 2022.05.02(월)
 
 - spring legacy project로 작성되어있던 관통프로젝트 spring boot로 변환
 - 전체적인 DB도 새로 모델링을 하는데 오랜만에 MYSQL Workbench를 사용해서 시간을 많이 낭비
