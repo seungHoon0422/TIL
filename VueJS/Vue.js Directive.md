@@ -1,12 +1,6 @@
 <h1 style="text-align : center">Vue.js Directive</h1>
 
 
-
-
-
-- v-text 
-  - 
-
 v-model
 
 - 양방향 바인딩 처리를 위해서 사용
