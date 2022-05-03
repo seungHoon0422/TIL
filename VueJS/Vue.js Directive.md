@@ -1,4 +1,4 @@
-<h1 style="text-align : center">Vue.js Directive
+<h1 style="text-align : center">Vue.js Directive</h1>
 
 
 
