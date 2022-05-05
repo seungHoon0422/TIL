@@ -2,6 +2,13 @@
 
 ## 2022/05
 
+
+### 2022.05.05(목)
+- spring boot project 아파트 매매정보 등록 페이지, buisness logic 업데이트
+- skt server/backend 사전과제  spring boot로 시작
+
+
+
 ### 2022.05.04(수)
 - ES6문법 적용하여 Vue.js 추가학습
 - 관통 프로젝트 update
