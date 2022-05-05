@@ -75,9 +75,13 @@
 ### 5. REST API Annotation
 
 - `@ResponseBody` : 넘어갈 화면이 아니라 데이터라고 명시
+  - `@RestController`가 선언되어있으면 해당 controller에 포함되어있는 모든 method에는 responsebody annotation이 붙는다.
+  - 일반 Controller에서 데이터를 front로 전달 할 때 일반적으로 ResponseEntity<?> 객체를 사용해서 전달하고, <>안에 들어가는 parameter 유형은 exception상황을 고려하여 ?로 표시하고, 상황에 맞는 개체를 생성하여 return 한다.
 - `@RestController` : 이 Controller안에 있는 method는 모두 data전송을 위한 함수이다.
+  - SPA 페이지 구현을 위해서 비동기로 데이터를 받아오는데 사용한다.
 - `@CrossOrigin(*)` : 등록된 도메인만 접근 가능하다. 허용하고 싶은 도메인 주소만 적용
-- `@RequestBody MemberDto memberDto` : 사용자가 나한테 데이터를 넘겨줬을 때, json
+- `@RequestBody` : 사용자가 나한테 데이터를 넘겨줬을 때, json
+  - ex) `@RequestBody MemberDto memberDto`
 
 
 
