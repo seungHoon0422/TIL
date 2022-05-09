@@ -1,4 +1,4 @@
-# myBatis 적용 시 변경사항 
+# myBatis 적용시 변경사항
 
 
 
