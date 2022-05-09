@@ -1,6 +1,8 @@
 # History
 
-## 2022/05
+## 2022.05.09(월)
+- vue js instance, component 학습
+- 2 상하관계에 있는 component 관계에서 자식은 부모 component에게 emit 이벤트를 발생시키고, 부모는 자식 component에게 props 를 사용하여 파라메터를 전달한다.
 
 ### 2022.05.08(일)
 - 월요일 DB, MYBatis 평가가 예정되어있어 기본 sql문법 정리, myBatis 복습
