@@ -1,11 +1,15 @@
 # History
 
-## 2022.05.09(월)
+### 2022.05.12(목)
+- npm(node package manager)를 사용해서 Vue Project를 생성한다.
+- 기존에 html, css, js 로 나뉘어있던 프로젝트를 Vue component로 수정 
+
+### 2022.05.09(월)
 - vue.js component router 적용
 - VueRouter객체 활용해서 기존 html 페이지 이동방식에서 모두 비동기로 동작하게 수정
 
 
-## 2022.05.09(월)
+### 2022.05.09(월)
 - vue js instance, component 학습
 - 2 상하관계에 있는 component 관계에서 자식은 부모 component에게 emit 이벤트를 발생시키고, 부모는 자식 component에게 props 를 사용하여 파라메터를 전달한다.
 
