@@ -1,5 +1,13 @@
 # History
 
+
+
+
+### 2022.05.13(금)
+- vue 과목평가 준비
+- 관통프로젝트 backend rest controller 방식으로 수정
+
+
 ### 2022.05.12(목)
 - npm(node package manager)를 사용해서 Vue Project를 생성한다.
 - 기존에 html, css, js 로 나뉘어있던 프로젝트를 Vue component로 수정 
