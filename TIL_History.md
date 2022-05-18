@@ -1,7 +1,10 @@
 # History
 
-### 2022.05.17(화)
-- 
+### 2022.05.18(수)
+- kakao map api와 vue 프로젝트 연동을 통해서 아파트 매매리스트 랜더링
+- vuex를 사용해서 house view 컴포넌트와, 매매리스트 테이블 component, kakao map component 데이터 이동
+- computed영역에 mapstate를 사용해서 state의 변화에 따라 동작 수행
+- actions에서는 직접적인 state의 변경을 처리하지 않고, context 안에있는 commit을 사용해서 mutations를 호출하고, state 값의 변동은 mutation에서 처리한다.
 
 ### 2022.05.16(월)
 - vue 라이브러리 vuex 학습
