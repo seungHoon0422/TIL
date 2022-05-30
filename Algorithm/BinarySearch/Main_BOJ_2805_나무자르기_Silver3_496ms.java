@@ -15,6 +15,7 @@ public class Main_BOJ_2805_나무자르기_Silver3_496ms {
 
 	public static void main(String[] args) throws Exception {
 		
+		
 		st = new StringTokenizer(br.readLine());
 		N = Integer.parseInt(st.nextToken());
 		M = Integer.parseInt(st.nextToken());
