@@ -1,6 +1,10 @@
 # History
 
 
+### 2022.06.21(화)
+- notion portfolio 작성
+- 소프트웨어 공학, 운영체제, 자료구조, DB  CS 학습
+- 해야할일 : CS 학습 내용 정리, algorithm study review, portfolio 마무리
 ### 2022.06.01(수)
 - 알고리즘 스터디 진행
 - Programmers 카카오 인턴쉽 년도별로 진행 예정
